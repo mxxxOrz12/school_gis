@@ -1,5 +1,6 @@
+let point;
+
 let a;
+a = 20;
 
-a = 10;
-
-
+let Pointshow;
