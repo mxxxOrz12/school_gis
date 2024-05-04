@@ -1,0 +1,261 @@
+.map-page {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.common-layout {
+    height: 100%;
+    width: 100%;
+}
+
+.el-container {
+    height: 100%;
+}
+
+.el-header {
+    background-color: transparent;
+    color: #181818;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left p {
+    font-size: 28px;
+    font-weight: 550;
+    margin-left: 10px;
+    color: #181818;
+
+
+}
+
+.header-left img {
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right:hover {
+    background-color: #0880ff;
+    color: #fff;
+}
+
+.custom-link {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 1.3rem;
+    font-weight: 550;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.custom-link:hover {
+    color: #181818;
+
+}
+
+.header-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 550;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 0px 30px 0px 30px;
+
+}
+
+
+
+.header-right .el-button .header-link:hover {
+    color: #fff !important;
+}
+
+
+
+.main-page .first-page {
+    background-color: #f5f5f5;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../assets/img/xiaoyuan1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.main-page .first-page .page-left {
+    width: 600px;
+}
+
+.main-page .first-page .page-left img {
+    width: 500px;
+    height: 500px;
+    margin-left: 100px;
+    transform: translateY(400px);
+    opacity: 0;
+}
+
+.main-page .first-page .page-left img.active {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 3s ease forwards;
+}
+
+.main-page .first-page .page-right {
+    width: 800px;
+    position: relative;
+    top: -50px;
+    right: 50px;
+    opacity: 0;
+    transform: translateY(400px);
+}
+
+.page-right.active {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 3.5s ease forwards;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(400px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-page .first-page .page-right h1 {
+    font-size: 2.5em;
+    color: #007bff;
+    padding: 0 0 50px 0;
+}
+
+.main-page .first-page .page-right p {
+    font-size: 1.5em;
+    line-height: 2.6;
+    margin-bottom: 10px;
+}
+
+.main-page .first-page .page-right .page-right-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 200px;
+    padding: 60px 0 0 0;
+}
+
+.main-page .first-page .page-right .page-right-icons img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.main-page .first-page .page-right .page-right-icons img:last-child {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.main-page .first-page .page-right .el-button {
+    width: 600px;
+    height: 50px;
+    position: relative;
+    top: 80px;
+    left: 60px;
+    color: #1a5be8;
+    background-color: rgb(4, 141, 252);
+}
+
+
+.main-page .first-page .page-right .el-button:hover,
+.main-page .first-page .page-right .el-button:hover .custom-link {
+    background-color: #ffffff;
+    color: #181818 !important;
+
+}
+
+.first-page .page-right .el-button p {
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 10px 0 0 0;
+    color: #fff;
+}
+
+.el-carousel__item h3 {
+    display: flex;
+    color: #475669;
+    opacity: 0.75;
+    line-height: 500px;
+    margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+    background-image: url(../assets/img/xiaoyuan2.jpg);
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+    background-image: url(../assets/img/xiaoyuan3.jpg);
+}
+
+.el-carousel__item:nth-child(2n + 3) {
+    background-image: url(../assets/img/xiaoyuan4.jpg);
+    background-size: 100% 100%;
+}
+
+.footer {
+    background-color: #0f315e;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 400px;
+    background-image: linear-gradient(rgba(15, 49, 94, 0.9), rgba(15, 49, 94, 0.9)), url(../assets/img/xiaoyuan.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.footer p {
+    padding: 20px;
+}
+
+
+
+
+.el-button {
+    padding: 20px;
+    background-color: transparent;
+}
