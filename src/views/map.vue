@@ -16,7 +16,7 @@
     const handleChange = (data, checkedNodes) => {
         if (checkedNodes == true) {
             let label = data.label
-            axios.get(`./src/data/FeaturesToJSON_OutJsonFile_${label}_turned.json`).then(res => {
+            axios.get(`./src/assets/data/FeaturesToJSON_OutJsonFile_${label}_turned.json`).then(res => {
                 const newFeatures = res.data.features.map(feature => {
                     const bdCoords = cgcs2000ToBaidu(feature.geometry.coordinates[0], feature.geometry.coordinates[1]);
                     return {
@@ -41,10 +41,7 @@
     const showInfoWindow = (feature) => {
         show.value = true;
         position.value = { lng: feature.lng, lat: feature.lat };
-        console.log(feature);
         info.value = { feature };
-        console.log(info.value.feature);
-
     }
     const drawer = ref(false);
 
