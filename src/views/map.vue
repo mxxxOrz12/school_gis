@@ -17,7 +17,7 @@
         if (checkedNodes == true) {
             let label = data.label
 
-            axios.get(`/json/FeaturesToJSON_OutJsonFile_${label}_turned.json`).then(res => {
+            axios.get(`./json/FeaturesToJSON_OutJsonFile_${label}_turned.json`).then(res => {
                 const newFeatures = res.data.features.map(feature => {
                     const bdCoords = cgcs2000ToBaidu(feature.geometry.coordinates[0], feature.geometry.coordinates[1]);
                     return {
@@ -101,7 +101,9 @@
                         <p class="info-item"> 经度：{{ info.feature.lng.toFixed(6) }} </p>
                         <div class="info-image-container">
                             <p class="info-item">部件照片：</p>
-                            <img :src="info.feature.properties.ImageUrl" alt="部件照片" class="info-image">
+                            <img :src="info.feature.properties.ImageUrl" alt="部件照片" class="info-image"
+                                v-if="info.feature.properties.ImageUrl">
+                            <span v-else>暂无图片</span>
                         </div>
 
                     </div>

@@ -3,7 +3,6 @@ import * as echarts from 'echarts';
 
 const initChart = () => {
     var chartDom = document.getElementById('map-info-left');
-    console.log(chartDom);
     if (chartDom) {
         var myChart = echarts.init(chartDom);
         const option = {
@@ -46,7 +45,6 @@ const initChart = () => {
 }
 const initChart1 = () => {
     var chartDom = document.getElementById('map-info-right');
-    console.log(chartDom);
     if (chartDom) {
         var myChart = echarts.init(chartDom);
         const option = {
