@@ -1,4 +1,5 @@
 # school_gis
+<img src="https://img.shields.io/github/license/tensorflow/tensorflow.svg"/>
 
 This template should help get you started developing with Vue 3 in Vite.
 
